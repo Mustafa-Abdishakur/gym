@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./contact.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <title>NEOGYM</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <h2>NEOGYM</h2>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="../pages/about.html">WHY US</a></li>
+                    <li><a href="./trainers.html">TRAINERS</a></li>
+                    <li><a href="./contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="dropdown">
+                <img src="../img/menu.png" alt="menu">
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="./about.html">WHY US</a></li>
+                        <li><a href="./trainers.html">TRAINERS</a></li>
+                        <li><a href="./contact.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+        <div class="contact-form">
+            <h2>CONTACT US</h2>
+            <form>
+                <input type="text" placeholder="Name"><br>
+                <input type="text" placeholder="Email"><br>
+                <input type="text" placeholder="Mobile"><br>
+                <textarea cols="30" rows="10" placeholder="Enter text here..."></textarea>
+                <input type="submit">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <img src="../img/location-white.png" alt="Location">
+            <p>Location</p>
+        </div>
+        <div>
+            <img src="../img/telephone-white.png" alt="Telephone">
+            <p>+97151234567</p>
+        </div>
+        <div>
+            <img src="../img/envelope-white.png" alt="Evelope">
+            <p>Demo@hotmail.com</p>
+        </div>
+    </footer>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            const location = { lat: 24.452254, lng: 54.387625 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: location,
+            });
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
+
+        window.initMap = initMap;
+    </script>
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-7u8tvdJFy-KyqLXjKQZtYr0XCISWnEo&callback=initMap&v=weekly"
+        defer
+        ></script>
+</body>
+
+</html>
