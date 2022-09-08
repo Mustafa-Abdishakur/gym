@@ -88,9 +88,7 @@ nav ul li a:hover {
     animation: slideh ease-out 15s infinite;
     position: relative;
 }
-/* .text-container:hover { 
-    animation-play-state: paused;
- } */
+
 .home-container button {
     margin-top:20px;
     background: transparent;
@@ -115,6 +113,7 @@ nav ul li a:hover {
     border:2px solid #fff;
     border-radius: 50%;
 }
+
 .choose-container {
     display:flex;
     align-items: center;
